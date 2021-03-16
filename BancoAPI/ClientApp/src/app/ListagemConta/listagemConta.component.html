@@ -1,0 +1,22 @@
+<div class="row">
+  <table class="table table-striped">
+    <tr>
+      <td>ID</td>
+      <td>Código Banco</td>
+      <td>No. Conta</td>
+      <td>No. Agência</td>
+      <td>CPF/CNPJ</td>
+      <td>Nome do Titular</td>
+      <td>Data Abertura</td>
+    </tr>
+    <tr *ngFor="let d of data">
+      <td>{{d.contaId}}</td>
+      <td>{{d.codBanco}}</td>
+      <td>{{d.numeroConta}}</td>
+      <td>{{d.numeroAgencia}}</td>
+      <td>{{d.cpf}}</td>
+      <td>{{d.nomeTitular}}</td>
+      <td>{{d.dataAbertura}}</td>
+    </tr>
+  </table>
+</div>

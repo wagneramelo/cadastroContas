@@ -1,0 +1,70 @@
+<div class="container">
+  <form [formGroup]="ContaForm" (ngSubmit)="this[EventValue]()">
+    <h3>Cadastrar conta de usuário</h3>
+    <div class="row">
+      <table class="table">
+        <tr>
+          <td>Código do Banco</td>
+          <td>
+            <input type="hidden" formControlName="ContaId">
+            <input type="text" formControlName="CodBanco">
+            <!--<div *ngIf="submitted && CartaoForm.controls.CodBanco.errors" class="text-danger">
+              <div *ngIf="CartaoForm.controls.CodBanco.errors.required">O código do banco é obrigatório</div>
+            </div>-->
+          </td>
+        </tr>
+        <tr>
+          <td>Número da Conta</td>
+          <td>
+            <input type="text" formControlName="NumeroConta">
+            <!--<div *ngIf="submitted && CartaoForm.controls.NumeroConta.errors" class="text-danger">
+              <div *ngIf="CartaoForm.controls.NumeroConta.errors.required">O número da conta é obrigatório</div>
+            </div>-->
+          </td>
+        </tr>
+        <tr>
+          <td>Número da Agência</td>
+          <td>
+            <input type="text" formControlName="NumeroAgencia">
+            <!--<div *ngIf="submitted && CartaoForm.controls.NumeroAgencia.errors" class="text-danger">
+              <div *ngIf="CartaoForm.controls.NumeroAgencia.errors.required">O número da agência é obrigatório</div>
+            </div>-->
+          </td>
+        </tr>
+        <tr>
+          <td>CPF ou CNPJ</td>
+          <td>
+            <input type="text" formControlName="Cpf">
+            <!--<div *ngIf="submitted && CartaoForm.controls.Cpf.errors" class="text-danger">
+              <div *ngIf="CartaoForm.controls.Cpf.errors.required">O CPF/CNPJ é obrigatório</div>
+            </div>-->
+          </td>
+        </tr>
+        <tr>
+          <td>Nome ou razão social do titular</td>
+          <td>
+            <input type="text" formControlName="NomeTitular">
+            <!--<div *ngIf="submitted && CartaoForm.controls.NomeTitular.errors" class="text-danger">
+              <div *ngIf="CartaoForm.controls.NomeTitular.errors.required">O nome ou razão social do titular é obrigatório</div>
+            </div>-->
+          </td>
+        </tr>
+        <tr>
+          <td>Data de Abertura</td>
+          <td>
+            <input type="text" formControlName="dataAbertura">
+            <!--<div *ngIf="submitted && CartaoForm.controls.dataAbertura.errors" class="text-danger">
+              <div *ngIf="CartaoForm.controls.dataAbertura.errors.required">A data de abertura é obrigatória</div>
+            </div>-->
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit" class="btn btn-primary">{{EventValue}}</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+  </form>
+</div> 

@@ -85,7 +85,7 @@
           <td>{{d.numeroAgencia}}</td>
           <td>{{d.cpf}}</td>
           <td>{{d.nomeTitular}}</td>
-          <td>{{d.dataAbertura}}</td>
+          <td>{{d.dataAbertura | date}}</td>
           <td><a (click)="EditData(d)" class="btn btn-warning">Edita</a></td>
           <td><a (click)="deleteData(d.contaId)" class="btn btn-danger">Deleta</a></td>
         </tr>

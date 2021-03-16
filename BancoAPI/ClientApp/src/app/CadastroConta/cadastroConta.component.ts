@@ -6,6 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   selector: 'app-cadastro-conta',
   templateUrl: './cadastroConta.component.html',
 })
+
 export class CadastroContaComponent {
   title = 'Cadastro Conta';
   constructor(private CadastroContaService: CadastroContaService) { }
@@ -16,7 +17,7 @@ export class CadastroContaComponent {
   ngOnInit(): void {
     this.getdata();
     this.ContaForm = new FormGroup({
-      ContaId: new FormControl(null),
+      ContaId: new FormControl(0),
       CodBanco: new FormControl("", [Validators.required]),
       NumeroConta: new FormControl("", [Validators.required]),
       NumeroAgencia: new FormControl("", [Validators.required]),

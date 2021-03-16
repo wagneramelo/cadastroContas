@@ -9,6 +9,7 @@ namespace BancoAPI.Models
 {
     public class Conta
     {
+        [Key]
         public int ContaId { get; set; }
 
         [Required]

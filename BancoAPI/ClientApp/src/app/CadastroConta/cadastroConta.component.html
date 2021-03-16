@@ -9,8 +9,8 @@
             <input type="hidden" formControlName="ContaId">
             <input type="text" formControlName="CodBanco">
             <!--<div *ngIf="submitted && CartaoForm.controls.CodBanco.errors" class="text-danger">
-              <div *ngIf="CartaoForm.controls.CodBanco.errors.required">O código do banco é obrigatório</div>
-            </div>-->
+            <div *ngIf="CartaoForm.controls.CodBanco.errors.required">O código do banco é obrigatório</div>
+          </div>-->
           </td>
         </tr>
         <tr>
@@ -18,8 +18,8 @@
           <td>
             <input type="text" formControlName="NumeroConta">
             <!--<div *ngIf="submitted && CartaoForm.controls.NumeroConta.errors" class="text-danger">
-              <div *ngIf="CartaoForm.controls.NumeroConta.errors.required">O número da conta é obrigatório</div>
-            </div>-->
+            <div *ngIf="CartaoForm.controls.NumeroConta.errors.required">O número da conta é obrigatório</div>
+          </div>-->
           </td>
         </tr>
         <tr>
@@ -27,8 +27,8 @@
           <td>
             <input type="text" formControlName="NumeroAgencia">
             <!--<div *ngIf="submitted && CartaoForm.controls.NumeroAgencia.errors" class="text-danger">
-              <div *ngIf="CartaoForm.controls.NumeroAgencia.errors.required">O número da agência é obrigatório</div>
-            </div>-->
+            <div *ngIf="CartaoForm.controls.NumeroAgencia.errors.required">O número da agência é obrigatório</div>
+          </div>-->
           </td>
         </tr>
         <tr>
@@ -36,8 +36,8 @@
           <td>
             <input type="text" formControlName="Cpf">
             <!--<div *ngIf="submitted && CartaoForm.controls.Cpf.errors" class="text-danger">
-              <div *ngIf="CartaoForm.controls.Cpf.errors.required">O CPF/CNPJ é obrigatório</div>
-            </div>-->
+            <div *ngIf="CartaoForm.controls.Cpf.errors.required">O CPF/CNPJ é obrigatório</div>
+          </div>-->
           </td>
         </tr>
         <tr>
@@ -45,8 +45,8 @@
           <td>
             <input type="text" formControlName="NomeTitular">
             <!--<div *ngIf="submitted && CartaoForm.controls.NomeTitular.errors" class="text-danger">
-              <div *ngIf="CartaoForm.controls.NomeTitular.errors.required">O nome ou razão social do titular é obrigatório</div>
-            </div>-->
+            <div *ngIf="CartaoForm.controls.NomeTitular.errors.required">O nome ou razão social do titular é obrigatório</div>
+          </div>-->
           </td>
         </tr>
         <tr>
@@ -54,8 +54,8 @@
           <td>
             <input type="text" formControlName="dataAbertura">
             <!--<div *ngIf="submitted && CartaoForm.controls.dataAbertura.errors" class="text-danger">
-              <div *ngIf="CartaoForm.controls.dataAbertura.errors.required">A data de abertura é obrigatória</div>
-            </div>-->
+            <div *ngIf="CartaoForm.controls.dataAbertura.errors.required">A data de abertura é obrigatória</div>
+          </div>-->
           </td>
         </tr>
         <tr>
@@ -65,6 +65,32 @@
         </tr>
       </table>
     </div>
-    
+    <div class="row">
+      <table class="table table-striped">
+        <tr>
+          <td>ID</td>
+          <td>Código Banco</td>
+          <td>No. Conta</td>
+          <td>No. Agência</td>
+          <td>CPF/CNPJ</td>
+          <td>Nome do Titular</td>
+          <td>Data Abertura</td>
+          <td>Edita</td>
+          <td>Deleta</td>
+        </tr>
+        <tr *ngFor="let d of data">
+          <td>{{d.contaId}}</td>
+          <td>{{d.codBanco}}</td>
+          <td>{{d.numeroConta}}</td>
+          <td>{{d.numeroAgencia}}</td>
+          <td>{{d.cpf}}</td>
+          <td>{{d.nomeTitular}}</td>
+          <td>{{d.dataAbertura}}</td>
+          <td><a (click)="EditData(d)" class="btn btn-warning">Edita</a></td>
+          <td><a (click)="deleteData(d.contaId)" class="btn btn-danger">Deleta</a></td>
+        </tr>
+      </table>
+    </div>
+
   </form>
 </div> 
